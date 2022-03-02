@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DetailWeatherActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/custom_toolbar"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_marginStart="16dp"
+        android:id="@+id/tvDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:text="Rabu" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/tvDay"
+        app:layout_constraintTop_toBottomOf="@+id/tvDay"
+        tools:text="13 Januari 2022" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTemperature"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="70sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvDate"
+        app:layout_constraintTop_toBottomOf="@+id/tvDate"
+        tools:text="20 C" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_marginEnd="16dp"
+        android:id="@+id/iconTemp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTemperature"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/iconTemp"
+        app:layout_constraintStart_toStartOf="@+id/iconTemp"
+        app:layout_constraintTop_toBottomOf="@+id/iconTemp"
+        tools:text="Hujan" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvWindVelocity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/tvTemperature"
+        app:layout_constraintTop_toBottomOf="@+id/tvTemperature"
+        tools:text="kecepatan angin" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tvWindVelocity"
+        app:layout_constraintTop_toBottomOf="@+id/tvWindVelocity"
+        tools:text="kelembapan" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvPressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tvHumidity"
+        app:layout_constraintTop_toBottomOf="@+id/tvHumidity"
+        tools:text="Tekanan" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tvPressure"
+        app:layout_constraintTop_toBottomOf="@+id/tvPressure"
+        tools:text="Lokasi" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
